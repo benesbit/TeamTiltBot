@@ -1,5 +1,5 @@
 const tmi = require('tmi.js');
-import { config } from './config';
+import { config } from './config.mjs';
 
 // Define configuration options
 const opts = {
