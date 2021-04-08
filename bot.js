@@ -42,3 +42,9 @@ function onMessageHandler(target, context, msg, self) {
             console.log(`* Unknown command ${commandName}`);
     }
 }
+
+// Function called when "!dice" command is issued
+function rollDice() {
+    const sides = 6;
+    return Math.floor(Math.random() * sides) + 1;
+}
