@@ -26,5 +26,7 @@ client.connect();
 function onMessageHandler(target, context, msg, self) {
     if (self) { return; } // Ignore your own messages you silly bot
 
-    
+    // Remove whitespace from chat message
+    const commandName = msg.trim();
+
 }
