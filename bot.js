@@ -29,4 +29,16 @@ function onMessageHandler(target, context, msg, self) {
     // Remove whitespace from chat message
     const commandName = msg.trim();
 
+    // If the command is known, execute it baby!
+    switch (commandName) {
+        case '!dice':
+            const num = rollDice();
+            client.say(target, `You rolled a ${num}`);
+            console.log(`* Executed ${commandName} command`);
+            break;
+        default:
+            // Command Unknown
+            client.say(target, `Sorry, but ${commandName} is an unknown command`);
+            console.log(`* Unknown command ${commandName}`);
+    }
 }
