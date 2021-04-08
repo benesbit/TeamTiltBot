@@ -14,3 +14,7 @@ const opts = {
 
 // Create a client with our options
 const client = new tmi.client(opts);
+
+// Register our event handlers
+client.on('message', onMessageHandler);
+client.on('connected', onConnectionHandler);
