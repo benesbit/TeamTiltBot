@@ -21,3 +21,10 @@ client.on('connected', onConnectionHandler);
 
 // Connect to Twitch
 client.connect();
+
+// Called every time a message comes in (Message Handler)
+function onMessageHandler(target, context, msg, self) {
+    if (self) { return; } // Ignore your own messages you silly bot
+
+    
+}
