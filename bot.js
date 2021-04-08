@@ -48,3 +48,8 @@ function rollDice() {
     const sides = 6;
     return Math.floor(Math.random() * sides) + 1;
 }
+
+// Called every time the bot connects to Twitch chat
+function onConnectionHandler(addr, port) {
+    console.log(`* Connected to ${addr}:${port}`);
+}
